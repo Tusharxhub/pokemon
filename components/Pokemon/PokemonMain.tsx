@@ -43,7 +43,7 @@ export default function PokemonMain({ initialPokemons }: Props) {
         setIsLoadingTypes(true);
         const types = await getAllPokemonTypes();
         setAllTypes(types);
-      } catch (error) {
+      } catch {
         toast({
           title: "Error",
           description: "Failed to load Pokemon types. Please try again.",
@@ -101,7 +101,7 @@ export default function PokemonMain({ initialPokemons }: Props) {
       } else {
         setHasMore(false);
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "Failed to load more Pokemon. Please try again.",
@@ -138,7 +138,7 @@ export default function PokemonMain({ initialPokemons }: Props) {
 
         setPokemons(newPokemons);
         setOffset(POKEMON_LIMIT);
-      } catch (error) {
+      } catch {
         toast({
           title: "Error",
           description: `Failed to filter Pokemon by ${type}. Please try again.`,
