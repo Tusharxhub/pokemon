@@ -14,7 +14,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-transparent">
       {error && (
         <div className="flex items-center justify-center py-16">
           <p className="text-destructive text-lg">{error}</p>

@@ -17,7 +17,7 @@ export function BattleArena({
   onClearSlot,
 }: BattleArenaProps) {
   return (
-    <div className="w-full bg-linear-to-b from-primary/10 to-background border-b border-border">
+    <div className="w-full bg-linear-to-b from-primary/15 via-background to-secondary/10 border-b border-border/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <div>
@@ -31,7 +31,7 @@ export function BattleArena({
           <button
             onClick={onViewAnalysis}
             disabled={!selected1 || !selected2}
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto shadow-sm shadow-primary/30 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             View Battle Analysis
           </button>
@@ -41,7 +41,7 @@ export function BattleArena({
         <div className="grid grid-cols-2 gap-3 sm:gap-4">
           {/* Slot 1 */}
           {selected1 ? (
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 bg-card border border-border rounded-lg p-3 sm:p-4 relative group">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 bg-card/80 border border-border/60 rounded-xl p-3 sm:p-4 relative group">
               <div className="w-16 h-16 sm:w-20 sm:h-20 bg-primary/10 rounded-lg p-2 flex items-center justify-center shrink-0">
                 <Image
                   src={selected1.image || "/placeholder.svg"}
@@ -75,7 +75,7 @@ export function BattleArena({
               </button>
             </div>
           ) : (
-            <div className="flex items-center justify-center bg-card border-2 border-dashed border-border rounded-lg p-6 sm:p-8 text-center">
+            <div className="flex items-center justify-center bg-card/70 border-2 border-dashed border-border/70 rounded-xl p-6 sm:p-8 text-center">
               <div>
                 <p className="text-muted-foreground text-sm sm:text-base font-medium">
                   Select First Pokémon
@@ -89,7 +89,7 @@ export function BattleArena({
 
           {/* Slot 2 */}
           {selected2 ? (
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 bg-card border border-border rounded-lg p-3 sm:p-4 relative group">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 bg-card/80 border border-border/60 rounded-xl p-3 sm:p-4 relative group">
               <div className="w-16 h-16 sm:w-20 sm:h-20 bg-secondary/10 rounded-lg p-2 flex items-center justify-center shrink-0">
                 <Image
                   src={selected2.image || "/placeholder.svg"}
@@ -123,7 +123,7 @@ export function BattleArena({
               </button>
             </div>
           ) : (
-            <div className="flex items-center justify-center bg-card border-2 border-dashed border-border rounded-lg p-6 sm:p-8 text-center">
+            <div className="flex items-center justify-center bg-card/70 border-2 border-dashed border-border/70 rounded-xl p-6 sm:p-8 text-center">
               <div>
                 <p className="text-muted-foreground text-sm sm:text-base font-medium">
                   Select Second Pokémon

@@ -184,8 +184,8 @@ export default function PokemonMain({ initialPokemons }: Props) {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="w-full">
+    <div className="min-h-screen bg-transparent">
+      <main className="w-full pb-10">
         <BattleArena
           selected1={selected1}
           selected2={selected2}
@@ -195,65 +195,67 @@ export default function PokemonMain({ initialPokemons }: Props) {
 
         {/* Pokemon Selection Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-          <div className="mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-              Select Pokémon
-            </h2>
-            <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
-              Choose two Pokémon to compare their stats and battle
-            </p>
-            {isLoadingTypes ? (
-              <TypeFilterSkeleton />
-            ) : (
-              <TypeFilter
-                types={allTypes}
-                filterType={filterType}
-                setFilterType={handleFilterChange}
-              />
+          <div className="rounded-2xl border border-border/60 bg-card/70 backdrop-blur-sm p-4 sm:p-6 shadow-sm">
+            <div className="mb-6 sm:mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
+                Select Pokémon
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
+                Choose two Pokémon to compare their stats and battle
+              </p>
+              {isLoadingTypes ? (
+                <TypeFilterSkeleton />
+              ) : (
+                <TypeFilter
+                  types={allTypes}
+                  filterType={filterType}
+                  setFilterType={handleFilterChange}
+                />
+              )}
+            </div>
+
+            {/* Pokémon Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">
+              {pokemons.map((p) => {
+                const isSelected =
+                  selected1?.id === p.id || selected2?.id === p.id;
+                const isFirst = selected1?.id === p.id;
+                return (
+                  <PokemonCard
+                    key={p.id}
+                    pokemon={p}
+                    isSelected={isSelected}
+                    isFirst={isFirst}
+                    onClick={() => handlePokemonClick(p)}
+                  />
+                );
+              })}
+              {isLoading &&
+                Array.from({ length: POKEMON_LIMIT }).map((_, i) => (
+                  <PokemonCardSkeleton key={`skeleton-${i}`} />
+                ))}
+            </div>
+
+            <div ref={observerTarget} className="flex justify-center py-8">
+              {isLoading && <Spinner />}
+            </div>
+
+            {pokemons.length === 0 && !isLoading && (
+              <div className="flex items-center justify-center py-16">
+                <p className="text-muted-foreground text-lg">
+                  No Pokémon found for this type
+                </p>
+              </div>
+            )}
+
+            {!hasMore && pokemons.length > 0 && (
+              <div className="flex items-center justify-center py-8">
+                <p className="text-muted-foreground text-sm">
+                  No more Pokémon to load
+                </p>
+              </div>
             )}
           </div>
-
-          {/* Pokémon Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-4">
-            {pokemons.map((p) => {
-              const isSelected =
-                selected1?.id === p.id || selected2?.id === p.id;
-              const isFirst = selected1?.id === p.id;
-              return (
-                <PokemonCard
-                  key={p.id}
-                  pokemon={p}
-                  isSelected={isSelected}
-                  isFirst={isFirst}
-                  onClick={() => handlePokemonClick(p)}
-                />
-              );
-            })}
-            {isLoading &&
-              Array.from({ length: POKEMON_LIMIT }).map((_, i) => (
-                <PokemonCardSkeleton key={`skeleton-${i}`} />
-              ))}
-          </div>
-
-          <div ref={observerTarget} className="flex justify-center py-8">
-            {isLoading && <Spinner />}
-          </div>
-
-          {pokemons.length === 0 && !isLoading && (
-            <div className="flex items-center justify-center py-16">
-              <p className="text-muted-foreground text-lg">
-                No Pokémon found for this type
-              </p>
-            </div>
-          )}
-
-          {!hasMore && pokemons.length > 0 && (
-            <div className="flex items-center justify-center py-8">
-              <p className="text-muted-foreground text-sm">
-                No more Pokémon to load
-              </p>
-            </div>
-          )}
         </div>
       </main>
 

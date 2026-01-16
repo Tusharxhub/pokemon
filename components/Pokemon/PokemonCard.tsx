@@ -20,11 +20,11 @@ export function PokemonCard({
   return (
     <Card
       onClick={onClick}
-      className={`cursor-pointer transition-all hover:shadow-lg ${
+      className={`cursor-pointer transition-all hover:-translate-y-0.5 hover:shadow-lg ${
         isSelected
           ? isFirst
-            ? "ring-2 ring-blue-500 shadow-lg"
-            : "ring-2 ring-red-500 shadow-lg"
+            ? "ring-2 ring-primary/80 shadow-lg"
+            : "ring-2 ring-secondary/80 shadow-lg"
           : ""
       }`}
     >
@@ -42,7 +42,7 @@ export function PokemonCard({
           {pokemon.types.map((type) => (
             <span
               key={type}
-              className="text-xs bg-primary text-primary-foreground px-2 py-1 rounded"
+              className="text-xs bg-primary/15 text-primary px-2 py-1 rounded-full border border-primary/30"
             >
               {type}
             </span>
