@@ -1,3 +1,5 @@
+
+
 import { render } from "@testing-library/react";
 import BattleRadar from "@/components/Battle/BattleRadar";
 import type { ReactNode } from "react";
