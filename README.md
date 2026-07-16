@@ -1,184 +1,227 @@
-
-
-
 <div align="center">
 
-```bash
-██████╗  ██████╗ ██╗  ██╗███████╗███╗   ███╗ ██████╗ ███╗   ██╗
-██╔══██╗██╔═══██╗██║ ██╔╝██╔════╝████╗ ████║██╔═══██╗████╗  ██║
-██████╔╝██║   ██║█████╔╝ █████╗  ██╔████╔██║██║   ██║██╔██╗ ██║
-██╔═══╝ ██║   ██║██╔═██╗ ██╔══╝  ██║╚██╔╝██║██║   ██║██║╚██╗██║
-██║     ╚██████╔╝██║  ██╗███████╗██║ ╚═╝ ██║╚██████╔╝██║ ╚████║
-╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-````
+# ⚡ Pokémon
 
-**Next.js • TypeScript • Vitest**
+### Modern Pokémon Explorer
 
-![CI](https://github.com/Tusharxhub/pokemon/actions/workflows/ci.yml/badge.svg)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-active-success)
-![Matrix](https://img.shields.io/badge/theme-matrix--terminal-00ff41)
+A sleek and performant Pokémon web application built with **Next.js**, **TypeScript**, and **Vitest**. Designed with a clean architecture, reusable components, and a terminal-inspired aesthetic to deliver a fast and engaging user experience.
+
+<p>
+  <a href="https://pokemon-taupe.vercel.app">
+    <strong>🌐 Live Demo</strong>
+  </a>
+</p>
 
 </div>
 
 ---
 
-## > about
+## ✨ Features
 
-```bash
-A modern Pokemon web application focused on:
-- clean architecture
-- reusable components
-- scalable frontend patterns
-```
-
-Built with **Next.js** and **TypeScript**, tested using **Vitest**, and styled with a terminal-inspired aesthetic.
-
----
-
-## > live_demo
-
-```bash
-https://pokemon-taupe.vercel.app
-```
+- 🔍 Browse and explore Pokémon data
+- ⚡ Dynamic data fetching from the Pokémon API
+- 📱 Fully responsive interface
+- 🧩 Reusable component architecture
+- 💻 Type-safe codebase with TypeScript
+- 🧪 Unit testing with Vitest
+- 🚀 Optimized performance using Next.js
+- 🎨 Modern terminal-inspired UI
+- 🔄 Continuous Integration with GitHub Actions
 
 ---
 
-## > features
+## 🛠️ Tech Stack
 
-```bash
-✔ Dynamic Pokemon data fetching
-✔ Responsive, modern UI
-✔ Component-driven design
-✔ Fully typed TypeScript codebase
-✔ Test-ready setup with Vitest
-✔ CI-powered stability checks
-✔ Matrix / terminal inspired branding
-```
-
----
-
-## > tech_stack
-
-```bash
-Next.js        → App routing & SSR
-TypeScript    → Type safety
-CSS / Tailwind→ Styling
-Vitest        → Testing
-Node.js       → Runtime
-GitHub Actions→ CI pipeline
-```
+| Technology | Purpose |
+|------------|---------|
+| Next.js | React Framework |
+| React | UI Development |
+| TypeScript | Type-safe Development |
+| Tailwind CSS | Styling |
+| Vitest | Unit Testing |
+| GitHub Actions | Continuous Integration |
+| Node.js | Runtime |
+| Vercel | Deployment |
 
 ---
 
-## > setup
+## 📂 Project Structure
 
-```bash
-git clone https://github.com/Tusharxhub/pokemon.git
-cd pokemon
-npm install
-```
-
----
-
-## > run_dev
-
-```bash
-npm run dev
-```
-
-```bash
-open http://localhost:3000
-```
-
----
-
-## > build_prod
-
-```bash
-npm run build
-npm start
-```
-
----
-
-## > test
-
-```bash
-npm test
-```
-
----
-
-## > project_tree
-
-```bash
-.
-├── app/            # Next.js routes & pages
-├── components/     # Reusable UI components
-├── hooks/          # Custom hooks
-├── lib/            # Utilities
-├── public/         # Static assets
-├── tests/          # Test cases
-├── types/          # TypeScript definitions
+```text
+pokemon/
+├── app/
+├── components/
+├── hooks/
+├── lib/
+├── public/
+├── tests/
+├── types/
 ├── next.config.ts
 ├── vitest.config.ts
+├── package.json
 └── README.md
 ```
 
 ---
 
-## > og_preview
+# 🚀 Getting Started
+
+## Clone the Repository
 
 ```bash
-/og              → default frame
-/og?frame=1      → INIT
-/og?frame=2      → LOADING
-/og?frame=3      → ONLINE
-/og?frame=4      → STABLE
+git clone https://github.com/tushardevx01/pokemon.git
 ```
 
-Animated feel is achieved through frame-based OG rendering.
+## Navigate to the Project
+
+```bash
+cd pokemon
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Start the Development Server
+
+```bash
+npm run dev
+```
+
+Open **http://localhost:3000** in your browser.
 
 ---
 
-## > ci_status
+## 🌐 Live Demo
 
-```bash
-GitHub Actions CI
-✔ Runs on push & pull requests
-✔ Ensures build and test stability
-✔ Prevents broken main branch
-```
+🔗 **https://pokemon-taupe.vercel.app**
 
 ---
 
-## > contribute
+## 📜 Available Scripts
 
-```bash
-1. Fork repository
-2. Create feature branch
-3. Commit changes
-4. Open Pull Request
-```
-
----
-
-## > contact
-
-```bash
-Email     → t.k.d.dey2033929837@gmail.com
-GitHub    → https://github.com/Tusharxhub
-Instagram → https://www.instagram.com/tushardevx01/
-```
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm start` | Start production server |
+| `npm test` | Run test suite |
+| `npm run lint` | Run ESLint |
 
 ---
 
+## 🧪 Testing
 
+This project uses **Vitest** for unit testing.
+
+Run all tests:
 
 ```bash
-> SYSTEM STATUS: ONLINE
-> BUILD: STABLE
-> AUTHOR: Tusharxhub
+npm test
 ```
 
+The project is configured for continuous testing through **GitHub Actions**.
+
+---
+
+## 🚀 Continuous Integration
+
+GitHub Actions automatically:
+
+- ✅ Builds the project
+- ✅ Runs all tests
+- ✅ Verifies code quality
+- ✅ Prevents broken deployments
+
+---
+
+## 🎨 Architecture
+
+The project follows a scalable frontend architecture featuring:
+
+- Component-based development
+- Modular folder organization
+- Custom React Hooks
+- Utility-driven helper functions
+- Type-safe development
+- Easy maintainability
+
+---
+
+## 📚 Learning Objectives
+
+This project demonstrates:
+
+- Next.js App Router
+- Server-side rendering
+- TypeScript best practices
+- Component composition
+- API integration
+- Modern frontend architecture
+- Automated testing
+- CI/CD workflows
+
+---
+
+## 📈 Future Improvements
+
+- [ ] Pokémon search
+- [ ] Advanced filtering
+- [ ] Favorites system
+- [ ] Team builder
+- [ ] Evolution chains
+- [ ] Move database
+- [ ] Ability explorer
+- [ ] Dark & Light themes
+- [ ] Offline support (PWA)
+- [ ] Performance analytics
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+
+2. Create a feature branch.
+
+```bash
+git checkout -b feature/amazing-feature
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add amazing feature"
+```
+
+4. Push your branch.
+
+```bash
+git push origin feature/amazing-feature
+```
+
+5. Open a Pull Request.
+
+---
+
+## 📬 Connect With Me
+
+- **GitHub:** https://github.com/tushardevx01
+- **Portfolio:** https://tushardevx01.tech
+- **LinkedIn:** https://www.linkedin.com/in/tushardevx01
+- **Instagram:** https://www.instagram.com/tushardevx01/
+- **Email:** t.k.d.dey2033929837@gmail.com
+
+---
+
+<div align="center">
+
+Made with ❤️ by **Tushar Kanti Dey**
+
+⭐ If you enjoyed this project, consider giving it a star.
+
+</div>
